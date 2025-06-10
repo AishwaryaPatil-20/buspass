@@ -2,7 +2,7 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const SECRET = "smart-bus-pass"; // Use env variable in production
+const SECRET = "smart-bus-pass"; 
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
