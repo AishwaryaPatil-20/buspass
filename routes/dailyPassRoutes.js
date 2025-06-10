@@ -3,7 +3,6 @@ const router = express.Router();
 const DailyPass = require('../models/BusPass');
 const nodemailer = require('nodemailer');
 
-// Email transporter setup
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -12,7 +11,6 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// POST /api/pass
 router.post('/', async (req, res) => {
   try {
     const { passType, zoneType, idDigits, email, fare, city } = req.body;
@@ -57,7 +55,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// GET /api/pass/:email — fetch passes by email
 router.get('/:email', async (req, res) => {
   try {
     const email = req.params.email;

@@ -37,7 +37,7 @@ const ticketSchema = new mongoose.Schema({
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', // Optional, if you use authentication
+    ref: 'User', 
   },
   status: {
     type: String,
